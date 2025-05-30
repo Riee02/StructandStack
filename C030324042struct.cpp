@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int main(){
+
 struct mahasigma{
     string nama;
     string nim;
@@ -10,6 +10,7 @@ struct mahasigma{
     string jurusan;
     float ipk;
 };
+int main(){
     mahasigma rifqi;
     rifqi.nama="Muhammad Rifqi Fathoni";
     rifqi.nim="C030324042";
@@ -18,11 +19,18 @@ struct mahasigma{
     rifqi.jurusan="Elektro";
     rifqi.ipk=3.75;
 
+    string *nama=&rifqi.nama;
+    string *nim=&rifqi.nim;
+    string *kelas=&rifqi.kelas;
+    string *prodi=&rifqi.prodi;
+    string *jurusan=&rifqi.jurusan;
+    float *ipk=&rifqi.ipk;
+
     system("cls");
-    cout<<"nama: "<<rifqi.nama<<"\n";
-    cout<<"nim: "<<rifqi.nim<<"\n";
-    cout<<"kelas: "<<rifqi.kelas<<"\n";
-    cout<<"prodi: "<<rifqi.prodi<<"\n";
-    cout<<"jurusan: "<<rifqi.jurusan<<"\n";
-    cout<<"ipk: "<<rifqi.ipk<<"\n";
+    cout<<"nama\t: "<<*nama<<"\n";
+    cout<<"nim\t: "<<*nim<<"\n";
+    cout<<"kelas\t: "<<*kelas<<"\n";
+    cout<<"prodi\t: "<<*prodi<<"\n";
+    cout<<"jurusan\t: "<<*jurusan<<"\n";
+    cout<<"ipk\t: "<<*ipk<<"\n";
 }
