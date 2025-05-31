@@ -26,6 +26,7 @@ void Pop(Stack *S,ItemType *X){
     } else {
         --(S->count);
         *X=S->Item[S->count];
+        cout<<"Data pop "<<*X<<endl;
     }
 }
 
@@ -35,6 +36,7 @@ void Push(Stack *S,ItemType X){
     } else {
         S->Item[S->count]=X;
         ++(S->count);
+         cout<<"Data "<<X<<" berhasil di push."<< endl;
     }
 }
 
