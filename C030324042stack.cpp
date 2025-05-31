@@ -37,3 +37,25 @@ void Push(Stack *S,ItemType X){
         ++(S->count);
     }
 }
+
+
+int main(){
+    Stack S; //Biar simpel
+    ItemType X; //atas
+    InitializeStack(&S); 
+    Push(&S,11);
+    Push(&S,22);
+    Push(&S,33);
+    Push(&S,44);
+    Push(&S,55);
+    Push(&S,66); //Pengujian stack penuh
+
+    Pop(&S,&X);
+    Pop(&S,&X);
+    Pop(&S,&X);
+    Pop(&S,&X);
+    Pop(&S,&X);
+    Pop(&S,&X); //Sama
+
+    return 0;
+}
