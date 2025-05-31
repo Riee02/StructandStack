@@ -28,3 +28,12 @@ void Pop(Stack *S,ItemType *X){
         *X=S->Item[S->count];
     }
 }
+
+void Push(Stack *S,ItemType X){
+    if(S->count==MAXSTACK){
+        cout<<"Stack nya sudah penuh"<<endl;
+    } else {
+        S->Item[S->count]=X;
+        ++(S->count);
+    }
+}
