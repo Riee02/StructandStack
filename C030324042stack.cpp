@@ -13,3 +13,10 @@ void InitializeStack(Stack *S){
     S->count = 0;
 }
 
+int Full(Stack *S){
+    return(S->count==MAXSTACK);
+}
+int Empty(Stack *S){
+    return(S->count==0);
+}
+
