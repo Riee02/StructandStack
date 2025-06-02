@@ -10,7 +10,18 @@ struct mahasigma{
     string jurusan;
     float ipk;
 };
-int main(){
+
+void outputData(const mahasigma* mhs) {
+    cout<<"Nama\t: "<< mhs->nama<<endl;
+    cout<<"NIM\t: "<< mhs->nim<<endl;
+    cout<<"Kelas\t: "<< mhs->kelas<<endl;
+    cout<<"Prodi\t: "<< mhs->prodi<<endl;
+    cout<<"Jurusan\t: "<< mhs->jurusan<<endl;
+    cout<<"IPK\t: "<< mhs->ipk<<endl;
+}
+
+
+int main() {
     mahasigma rifqi;
     rifqi.nama="Muhammad Rifqi Fathoni";
     rifqi.nim="C030324042";
@@ -19,18 +30,6 @@ int main(){
     rifqi.jurusan="Elektro";
     rifqi.ipk=3.75;
 
-    string *nama=&rifqi.nama;
-    string *nim=&rifqi.nim;
-    string *kelas=&rifqi.kelas;
-    string *prodi=&rifqi.prodi;
-    string *jurusan=&rifqi.jurusan;
-    float *ipk=&rifqi.ipk;
-
-    system("cls");
-    cout<<"nama\t: "<<*nama<<"\n";
-    cout<<"nim\t: "<<*nim<<"\n";
-    cout<<"kelas\t: "<<*kelas<<"\n";
-    cout<<"prodi\t: "<<*prodi<<"\n";
-    cout<<"jurusan\t: "<<*jurusan<<"\n";
-    cout<<"ipk\t: "<<*ipk<<"\n";
+    outputData(&rifqi);
+    return 0;
 }
